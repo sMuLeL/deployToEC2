@@ -1,17 +1,6 @@
 version: '3.3'
 services:
 
-  database:
-    image: postgres:latest
-    container_name: database_test
-    env_file:
-      - ./env/database.env
-    volumes:
-      - postgres:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    restart: unless-stopped
-
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin_test
