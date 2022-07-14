@@ -25,8 +25,6 @@ services:
     build: ./backend/
     ports:
       - 81:80
-    depends_on:
-      - database
     restart: unless-stopped
 
 volumes:
