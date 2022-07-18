@@ -1,13 +1,13 @@
 version: 0.0
 os: linux
 files:
-  - source: pipeline_script/
+  - source: ./pipeline_script/
     destination: /home/ubuntu
 file_exists_behavior: OVERWRITE
 hooks:
-  ApplicationStart: 
-    - location: pipeline_script/ApplicationStart.sh
+  ApplicationStart:
+    - location: ./pipeline_script/ApplicationStart.sh
       runas: ubuntu
   ApplicationStop:
-    - location: pipeline_script/ApplicationStop.sh
+    - location: ./pipeline_script/ApplicationStop.sh
       runas: ubuntu
