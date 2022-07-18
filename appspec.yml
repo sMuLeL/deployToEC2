@@ -5,8 +5,8 @@ files:
   destination: /home/ubuntu
 hooks:
   ApplicationStart:
-  - location: ./pipeline_script/ApplicationStart.sh
+  - location: pipeline_script/ApplicationStart.sh
     runas: ubuntu
   ApplicationStop:
-  - location: ./pipeline_script/ApplicationStop.sh
+  - location: pipeline_script/ApplicationStop.sh
     runas: ubuntu
