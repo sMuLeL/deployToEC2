@@ -5,12 +5,12 @@ files:
     destination: /home/ubuntu/cartellaApplicazione/deployToEC2/
 file_exists_behavior: OVERWRITE
 hooks:
-  # ApplicationStart:
-  #   - location: pipeline_script/ApplicationStart.sh
-  #     runas: ubuntu
-  # ApplicationStop:
-  #   - location: pipeline_script/ApplicationStop.sh
-  #     runas: ubuntu
+  ApplicationStart:
+    - location: pipeline_script/ApplicationStart.sh
+      runas: ubuntu
+  ApplicationStop:
+    - location: pipeline_script/ApplicationStop.sh
+      runas: ubuntu
   BeforeInstall:
     - location: ./pipeline_script/ports.sh
       timeout: 300
