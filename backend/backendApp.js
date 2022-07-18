@@ -5,10 +5,10 @@ const { stringify } = require('querystring');
 const app = express();
 
 const pool = new Pool({
-    user: "postgres",
-    host: "baldinsamueleesamefin1.c9nj1x2p6gk5.eu-west-1.rds.amazonaws.com",
+    user: "itsuser",
+    host: "baldinsamueleesamefin.c9nj1x2p6gk5.eu-west-1.rds.amazonaws.com",
     database: "itsdb",
-    password: "Vmware1!",
+    password: "itsuser01",
     port: "5432"
 });
 
@@ -48,8 +48,8 @@ app.get('/', (req, res) => {
             </select>           
           </div><br>
           <button>INSERISCI DATI</button>&nbsp;
-          <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/find>CERCA</a></button>&nbsp;
-          <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/list>VISULIZZA TUTTI</a></button>
+          <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/find>CERCA</a></button>&nbsp;
+          <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/list>VISULIZZA TUTTI</a></button>
         </form>
       </body>
     </html>
@@ -102,8 +102,8 @@ app.get("/list", async(req, res) => {
       <h2>ESAME FINALE ITS: corso DEVO</h2>
       <h3>Elenco record inseriti</h3>
        ${myresult}
-       <button><a style='color:#FFFFFF' href=http://3.249.109.63:80>HOME</a></button>&nbsp;
-       <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/find>CERCA</a></button>
+       <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080>HOME</a></button>&nbsp;
+       <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/find>CERCA</a></button>
       
     </section>
       </body>
@@ -129,8 +129,8 @@ app.get("/find", async(req, res) => {
           <input type="text" name="astring">
         </div>
         <button>Cerca</button>&nbsp;
-        <button><a style='color:#FFFFFF' href=http://3.249.109.63:80>HOME</a></button>&nbsp;
-        <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/list>VISULIZZA TUTTI</a></button>
+        <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080>HOME</a></button>&nbsp;
+        <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/list>VISULIZZA TUTTI</a></button>
       </form>
     </body>
   </html>
@@ -162,9 +162,9 @@ app.post('/mysearch', async(req, res) => {
       <h2>ESAME FINALE ITS: corso DEVO<</h2>
       <h3>RISULTATO DELLA RICERCA per ${enteredText}</h3>
        ${myresult}
-      <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/>HOME</a></button>&nbsp;
-      <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/find>FAI UN'ALTRA RICERCA</a></button>
-      <button><a style='color:#FFFFFF' href=http://3.249.109.63:80/list>VISULIZZA TUTTI</a></button>
+      <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/>HOME</a></button>&nbsp;
+      <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/find>FAI UN'ALTRA RICERCA</a></button>
+      <button><a style='color:#FFFFFF' href=http://3.249.109.63:8080/list>VISULIZZA TUTTI</a></button>
 
     </section>
       </body>
