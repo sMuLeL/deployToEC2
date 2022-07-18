@@ -1,0 +1,17 @@
+
+// alcuni comandi utili:
+docker-compose build
+docker build backend
+docker-compose up -d
+docker-compose run backend
+docker-compose down
+
+docker-compose exec pgadmin  ls  /var/log/data/
+
+
+
+// esegue la bash nel container del database. utie per esempio per lanciare il tool CLI psql
+docker-compose exec database  bash
+
+
+
