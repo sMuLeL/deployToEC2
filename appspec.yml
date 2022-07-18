@@ -5,20 +5,20 @@ files:
     destination: /home/ubuntu
 file_exists_behavior: OVERWRITE
 hooks:
-  # ApplicationStart:
-  #   - location: pipeline_script/ApplicationStart.sh
-  #     runas: ubuntu
-  # ApplicationStop:
-  #   - location: pipeline_script/ApplicationStop.sh
-  #     runas: ubuntu
-  BeforeInstall:
-    - location: ./pipeline_script/ports.sh
-      timeout: 300
-      runas: root
-    - location: ./pipeline_script/install_dependencies.sh
-      timeout: 300
-      runas: root
-  AfterInstall:
-    - location: ./pipeline_script/start_server.sh
-      timeout: 300
-      runas: root
+  ApplicationStart:
+    - location: pipeline_script/ApplicationStart.sh
+      runas: ubuntu
+  ApplicationStop:
+    - location: pipeline_script/ApplicationStop.sh
+      runas: ubuntu
+  # BeforeInstall:
+  #   - location: ./pipeline_script/ports.sh
+  #     timeout: 300
+  #     runas: root
+  #   - location: ./pipeline_script/install_dependencies.sh
+  #     timeout: 300
+  #     runas: root
+  # AfterInstall:
+  #   - location: ./pipeline_script/start_server.sh
+  #     timeout: 300
+  #     runas: root
