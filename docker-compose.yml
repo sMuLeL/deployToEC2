@@ -1,17 +1,6 @@
 version: '3.3'
 services:
 
-  database:
-    image: postgres
-    container_name: esamefinale_DB
-    ports:
-      - 5432:5432
-    env_file:
-      - ./env/database.env
-    volumes:
-      - database:/var/lib/postgresql/data/
-    restart: unless-stopped
-
   pgadmin:
     image: dpage/pgadmin4
     container_name: esamefinale_pgadmin
@@ -19,14 +8,13 @@ services:
       - 5050:80
     env_file:
       - ./env/pgadmin.env
-    restart: unless-stopped
     
   backend:
     container_name: esamefinale_BE
-    build: ./backend
+    build: ./backend/
     ports:
-      - 81:80
+      - 80:80
     restart: unless-stopped
 
 volumes:
-  database:
+  postgres:

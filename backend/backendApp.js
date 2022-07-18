@@ -5,14 +5,12 @@ const { stringify } = require('querystring');
 const app = express();
 
 const pool = new Pool({
-    user: "itsuser",
-    host: "dev-postgres",
+    user: "postgres",
+    host: "baldinsamueleesamefin1.c9nj1x2p6gk5.eu-west-1.rds.amazonaws.com",
     database: "itsdb",
-    password: "itsuser01",
+    password: "Vmware1!",
     port: "5432"
 });
-
-
 
 let formInput = 'Inserire il primo record';
 
@@ -45,7 +43,7 @@ app.get('/', (req, res) => {
             <select name="country">
             <option>Italy</option>
             <option>Germany</option>
-            </select>           
+            </select>
           </div><br>
           <button>INSERISCI DATI</button>&nbsp;
           <button><a style='color:#FFFFFF' href=http://localhost:8080/find>CERCA</a></button>&nbsp;
@@ -104,7 +102,6 @@ app.get("/list", async(req, res) => {
        ${myresult}
        <button><a style='color:#FFFFFF' href=http://localhost:8080>HOME</a></button>&nbsp;
        <button><a style='color:#FFFFFF' href=http://localhost:8080/find>CERCA</a></button>
-      
     </section>
       </body>
     </html>
